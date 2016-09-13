@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Stills2DV
+﻿namespace Stills2DV
 {
-	struct Movement
+	internal struct Movement
 	{
-		public string Filename;
-		public int Width;
-		public int Height;
-		public int StartX;
-		public int StartY;
-		public int EndX;
-		public int EndY;
-		public int ZsCode;
-		public float ZoomStart;
-		public int ZeCode;
-		public float ZoomEnd;
-		public float Duration;
 		public int Crossfade;
 		public int CrossFrames;
-		public float StartSmooth;
-		public float EndSmooth;
+		public float Duration;
+		public string Filename;
+		public int EndX;
+		public int EndY;
+		public int Height;
+		public float SmoothEnd;
+		public float SmoothStart;
+		public int StartX;
+		public int StartY;
+		public int Width;
+		public float ZoomStart;
+		public ZoomCode ZoomStartCode;
+		public float ZoomEnd;
+		public ZoomCode ZoomEndCode;
 	}
 }

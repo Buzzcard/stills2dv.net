@@ -1,6 +1,6 @@
 ﻿namespace Stills2DV
 {
-	struct Image
+	internal struct Image
 	{
 		public int Height;
 		public string Path;

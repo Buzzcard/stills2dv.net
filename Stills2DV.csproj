@@ -45,11 +45,14 @@
     <Compile Include="Errno.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="Movement.cs" />
+    <Compile Include="OutputFormat.cs" />
     <Compile Include="Pixel.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="PPM.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Smoothing.cs" />
+    <Compile Include="ZoomCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

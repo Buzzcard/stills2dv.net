@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Stills2DV
 {
-	class PPM
+	internal class PPM
 	{
 		public static Image Read(string path)
 		{
@@ -20,7 +20,7 @@ namespace Stills2DV
 				streamWriter.Write("{0} {1}\n", output.Width, output.Height);
 				streamWriter.Write("255\n");
 				streamWriter.Flush();
-				
+
 				var binaryWriter = new BinaryWriter(stream);
 				foreach (var pixel in output.Pixels)
 				{

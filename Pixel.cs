@@ -3,12 +3,17 @@ using System.Drawing;
 
 namespace Stills2DV
 {
-	struct Pixel
+	internal struct Pixel
 	{
 		public byte A;
 		public byte B;
 		public byte G;
 		public byte R;
+
+		private static void Clamp(ref int value)
+		{
+			value = Math.Max(0, Math.Min(255, value));
+		}
 
 		public static Pixel FromArgb(int value)
 		{
@@ -20,11 +25,6 @@ namespace Stills2DV
 			return FromArgb(255, red, green, blue);
 		}
 
-		private static void Clamp(ref int value)
-		{
-			value = Math.Max(0, Math.Min(255, value));
-		}
-
 		public static Pixel FromArgb(int alpha, int red, int green, int blue)
 		{
 			Clamp(ref alpha);
@@ -34,10 +34,10 @@ namespace Stills2DV
 
 			return new Pixel
 			{
-				A = (byte)alpha,
-				R = (byte)red,
-				G = (byte)green,
-				B = (byte)blue
+				A = (byte) alpha,
+				R = (byte) red,
+				G = (byte) green,
+				B = (byte) blue
 			};
 		}
 
@@ -54,7 +54,7 @@ namespace Stills2DV
 
 		public int ToArgb()
 		{
-			return (int)((uint)A << 24) + (R << 16) + (G << 8) + B;
+			return (int) ((uint) A << 24) + (R << 16) + (G << 8) + B;
 		}
 	}
 }
